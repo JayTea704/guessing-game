@@ -44,9 +44,9 @@ public class Guess {
 		}
 	} 
      
-    //Introduces player to the rules of the guessing game  
-    public static void intro() {
-       
+    	//Introduces player to the rules of the guessing game  
+   	public static void intro() {
+       		
 		System.out.println("This program allows you to play a guessing game.");
    	  	System.out.println("I will think of a number between 1 and");
    	  	System.out.println("100 and will allow you to guess until");
@@ -80,36 +80,36 @@ public class Guess {
                
         	} 
     	   
-			else if (guess < randomNumber){ 
+		else if (guess < randomNumber){ 
     	   	
     			System.out.println("It's higher.");
+		}
             
-    		}
     	} 
 		
     	if(numTries == 1) {
       	
-  	 		System.out.printf("You got it right in %d guess%n", numTries);
+		System.out.printf("You got it right in %d guess%n", numTries);
      		return numTries;
     	}
       
     	else {
       
 		System.out.printf("You got it right in %d guesses%n", numTries);
-	    return numTries;
+	        return numTries;
     	}
-   	}	 
+   }	 
    
    	//Prints results of the guessing game
    	public static void results(int totalNumTries, int best, int totalGames) {
    	
 		double guessOverGame = (totalNumTries + 0.0) / (totalGames + 0.0);
    	
-    	System.out.println("Overall results:");
-    	System.out.println("   total games   = "+ totalGames);
-    	System.out.println("   total guesses = " + totalNumTries);
-    	System.out.printf("   guesses/game  = %.1f%n", guessOverGame);
-    	System.out.println("   best game     = " + best);
+    		System.out.println("Overall results:");
+    		System.out.println("   total games   = "+ totalGames);
+    		System.out.println("   total guesses = " + totalNumTries);
+    		System.out.printf("   guesses/game  = %.1f%n", guessOverGame);
+    		System.out.println("   best game     = " + best);
     
    	}   
 } 
