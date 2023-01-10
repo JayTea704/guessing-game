@@ -60,55 +60,55 @@ public class Guess {
    	//play one round of the guessing game
    	public static int playGame(Scanner input) { 
     	  
-    	int numTries = 0;
-      	int guess = 0;
-      
-      	Random rand = new Random();
-      	int randomNumber = rand.nextInt(MAX) + 1; 
-      
-      	System.out.println("I'm thinking of a number between 1 and " + MAX + "...");          
-      
-     	while (guess != randomNumber) {
-    		   
-        	numTries++;
-    		System.out.print("Your guess? ");
-    	   	guess = input.nextInt();
-         
-    	   	if (guess > randomNumber) {
-    	   	
-    	   		System.out.println("It's lower.");
-               
-        	} 
-    	   
-			else if (guess < randomNumber){ 
-    	   	
-    			System.out.println("It's higher.");
-			}
-            
-    	} 
-		
-    	if(numTries == 1) {
-      	
-		System.out.printf("You got it right in %d guess%n", numTries);
-     		return numTries;
-    	}
-      
-    	else {
-      
-		System.out.printf("You got it right in %d guesses%n", numTries);
-	        return numTries;
-    	}
+		int numTries = 0;
+		int guess = 0;
+
+		Random rand = new Random();
+		int randomNumber = rand.nextInt(MAX) + 1; 
+
+		System.out.println("I'm thinking of a number between 1 and " + MAX + "...");          
+
+		while (guess != randomNumber) {
+
+			numTries++;
+			System.out.print("Your guess? ");
+			guess = input.nextInt();
+
+			if (guess > randomNumber) {
+
+				System.out.println("It's lower.");
+
+			} 
+
+				else if (guess < randomNumber){ 
+
+					System.out.println("It's higher.");
+				}
+
+		} 
+
+		if(numTries == 1) {
+
+			System.out.printf("You got it right in %d guess%n", numTries);
+			return numTries;
+		}
+
+		else {
+
+			System.out.printf("You got it right in %d guesses%n", numTries);
+			return numTries;
+		}
    	}	 
 	//Prints results of the guessing game
    	public static void results(int totalNumTries, int best, int totalGames) {
    	
 		double guessOverGame = (totalNumTries + 0.0) / (totalGames + 0.0);
    	
-    	System.out.println("Overall results:");
-    	System.out.println("   total games   = "+ totalGames);
-    	System.out.println("   total guesses = " + totalNumTries);
-    	System.out.printf("   guesses/game  = %.1f%n", guessOverGame);
-    	System.out.println("   best game     = " + best);
-    
+		System.out.println("Overall results:");
+		System.out.println("   total games   = "+ totalGames);
+		System.out.println("   total guesses = " + totalNumTries);
+		System.out.printf("   guesses/game  = %.1f%n", guessOverGame);
+		System.out.println("   best game     = " + best);
+
    	}   
 } 
