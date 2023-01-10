@@ -44,7 +44,7 @@ public class Guess {
 		}
 	} 
      
-    	//Introduces player to the rules of the guessing game  
+    //Introduces player to the rules of the guessing game  
    	public static void intro() {
        		
 		System.out.println("This program allows you to play a guessing game.");
